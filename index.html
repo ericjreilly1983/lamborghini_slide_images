@@ -3,6 +3,7 @@
 <head>
 	<title>GlideJS demo</title>
 	<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
 	<style type="text/css">
 	img {
 		height: 250px;
@@ -18,14 +19,14 @@
 		transition-property: background, color;
 		transition-duration: 1s;
 		height: auto;
+		font-size: 25px;
 		padding: 0;
-
-		
+		outline: none;
 	}
+
 	button:hover {
 		background: white;
 		color: black;
-
 	}
 
 
@@ -55,10 +56,19 @@
 		float: right;
 		
 	}
+
+	h1 {
+		font-family: 'Nanum Myeongjo', serif;
+		font-size: 5em;
+		letter-spacing: .6em;
+		text-transform: uppercase;
+		margin: 0;
+		text-align: center;
+	}
 	</style>
 </head>
 <body>
-
+<h1>Lamborghini</h1>
 <div class="glide">
 <button id = "left_button"><</button>
 <button id = "right_button">></button>
@@ -76,7 +86,12 @@
 <script type="text/javascript">
   var glide = new Glide('.glide', {
   startAt: 0,
-  perView: 2
+  perView: 2,
+  breakpoints: {
+  	600: {
+  		perView: 1
+  	}
+  }
 })
 
 var leftButton = document.querySelector('#left_button');
