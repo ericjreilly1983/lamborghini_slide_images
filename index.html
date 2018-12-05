@@ -22,6 +22,10 @@
 		font-size: 25px;
 		padding: 0;
 		outline: none;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-right: 5px;
+		margin-left: 5px;
 	}
 
 	button:hover {
@@ -66,39 +70,49 @@
 		text-transform: uppercase;
 		margin: 0;
 		text-align: center;
-		background: #000000 -webkit-gradient(linear, 70% 0, 0 0, from(#000000), color-stop(0.5, #dadada), to(#000000));
-		background-position: -16em;
+		background: #000000 -webkit-gradient(linear, 60% 0, 0 0, from(#000000), color-stop(0.5, #FFD700), to(#000000));
+		background-position: -10em;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-repeat: no-repeat;
 		-webkit-background-size: 16em 100%;
 		-webkit-animation-name: shimmer;
- 		-webkit-animation-duration: 4.2s;
+ 		-webkit-animation-duration: 8.8s;
   		-webkit-animation-iteration-count: infinite;
+	}
+
+	h4 {
+		font-family: 'Nanum Myeongjo', serif;
+		text-transform: uppercase;
+		font-size: 2em;
+		/*letter-spacing: .6em;*/
+		text-align: center;
+		margin: 10px;
 	}
 	
 	@-webkit-keyframes shimmer {
     0% {
-        background-position: -16rem top; /*50px*/
+        background-position: -10em top; 
     }
 
-    70% {
-        background-position: 90rem top; /*200px*/
+    90% {
+        background-position: 20em top; 
     }
 
     100% {
-        background-position: 90rem top; /*200px*/
+        background-position: 20em top; 
     }
 }
 	.wrapper {
 		position: absolute;
 		overflow: hidden;
 		height: auto;
-		margin-left: 9em;
-		margin-right: 9em;
+		margin-left: 7em;
+		margin-right: 7em;
 		margin-top: 30px;
 		border: 1px solid black;
-		padding: 3em
+		padding: 3em;
+		margin-bottom: 10px;
 	}
 
 	p#first {
@@ -120,6 +134,7 @@
 </head>
 <body>
 <h1>Lamborghini</h1>
+<h4>By Eric Reilly</h4>
 <div class="glide">
 <button id = "left_button"><</button>
 <button id = "right_button">></button>
