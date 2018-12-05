@@ -25,7 +25,7 @@
 	}
 
 	button:hover {
-		background: white;
+		background: #dadada;
 		color: black;
 	}
 
@@ -66,8 +66,30 @@
 		text-transform: uppercase;
 		margin: 0;
 		text-align: center;
+		background: #000000 -webkit-gradient(linear, 70% 0, 0 0, from(#000000), color-stop(0.5, #dadada), to(#000000));
+		background-position: -16em;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-repeat: no-repeat;
+		-webkit-background-size: 16em 100%;
+		-webkit-animation-name: shimmer;
+ 		-webkit-animation-duration: 4.2s;
+  		-webkit-animation-iteration-count: infinite;
 	}
 	
+	@-webkit-keyframes shimmer {
+    0% {
+        background-position: -16rem top; /*50px*/
+    }
+
+    70% {
+        background-position: 90rem top; /*200px*/
+    }
+
+    100% {
+        background-position: 90rem top; /*200px*/
+    }
+}
 	.wrapper {
 		position: absolute;
 		overflow: hidden;
