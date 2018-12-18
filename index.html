@@ -131,6 +131,7 @@
 		left: 2500px;
 	}
 	</style>
+
 </head>
 <body>
 <h1>Lamborghini</h1>
@@ -138,12 +139,8 @@
 <div class="glide">
 <button id = "left_button"><</button>
 <button id = "right_button">></button>
-<div data-glide-el="track" class="glide__track">
-    <ul class="glide__slides">
-      <li class="glide__slide"><div class = "image"><a href = "#" id = "first_anchor"><img src="lambo1.png"></a></div></li>
-      <li class="glide__slide"><div class = "image"><a href = "#" id = "second_anchor"><img src="lambo2.jpg"></a></div></li>
-      <li class="glide__slide"><div class = "image"><a href = "#" id = "third_anchor"><img src="lambo3.jpg"></a></div></li>
-    </ul>
+  <div data-glide-el="track" class="glide__track">
+
   </div>
 </div>
 
@@ -170,6 +167,21 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 </body>
 <script type="text/javascript" src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		//generate hyperlinked images inside the gallery window using iterative loop
+	var cars = document.createElement('ul');
+	cars.classList.add('glide__slides')
+
+	var carData = [{id: "first_anchor", src: "lambo1.png"}, { id: "second_anchor", src: "lambo2.jpg"}, { id: "lambo3.jpg", src: "lambo3.jpg"}];
+
+
+	document.getElementsByClassName("glide__track")[0].appendChild(cars);
+
+	carData.forEach((car)=>{
+		cars.innerHTML += '<li class ="glide__slide"><div class = "image"><a href= "#" id = "' + car.id + '"><img src = "' + car.src + '"></a></div></li>'
+	});
+
+	</script>
 <script type="text/javascript" src = "node_modules/@glidejs/glide/dist/glide.min.js"></script>
 <script type="text/javascript">
   var glide = new Glide('.glide', {
